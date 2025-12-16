@@ -46,7 +46,7 @@ public class VertexTest extends TestCase {
 	@Test
 	public void testIsAdjacent() {
 		if(!vertex.isAdjacent(vertexB) || !vertex.isAdjacent(vertexC) || !vertex.isAdjacent(vertexD))
-			fail("Error determinando vértices adyacentes.");
+			fail("Error determinando vÃ©rtices adyacentes.");
 	}
 
 }

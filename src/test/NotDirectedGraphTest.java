@@ -28,7 +28,7 @@ public class NotDirectedGraphTest extends TestCase {
 		graph.insertVertex("C");	//pos 2
 		graph.insertVertex("D");	//pos 3
 		graph.insertVertex("E");	//pos 4
-		graph.insertVertex("F");	//pos 5 (este es un vértice aislado)
+		graph.insertVertex("F");	//pos 5 (este es un vÃ©rtice aislado)
 
 		graph.insertEdgeNDG(0, 2);
 		graph.insertEdgeNDG(0, 3);		
@@ -59,7 +59,7 @@ public class NotDirectedGraphTest extends TestCase {
 		for(int i=0; i<size; i++) {
 			degree = graph.degreeND(i);			
 			if(degree != expectedValues.get(i))							
-				fail(String.format("Error determinando grado del vértice %1$d. " +
+				fail(String.format("Error determinando grado del vÃ©rtice %1$d. " +
 						"Resultado esperado: %2$d. Resultado obtenido:%3$d", i, expectedValues.get(i), degree));
 		}
 	}
@@ -99,15 +99,15 @@ public class NotDirectedGraphTest extends TestCase {
 
 	@Test
 	public void testRemoveDisconnectVerticesND() {
-		//El único vértice aislado es el F, es el único que se puede eliminar.
+		//El Ãºnico vÃ©rtice aislado es el F, es el Ãºnico que se puede eliminar.
 		LinkedList<Vertex> deleted = graph.removeDisconnectVerticesND();
 
 		if(deleted.size() == 1) {
 			String data = (String) deleted.get(0).getInfo();
 			if(!(data.equalsIgnoreCase("F"))) 
-				fail("No se eliminó el vértice esperado.");
+				fail("No se eliminÃ³ el vÃ©rtice esperado.");
 		} else {
-			fail("No se eliminaron la cantidad esperada de vértices aislados.");
+			fail("No se eliminaron la cantidad esperada de vÃ©rtices aislados.");
 		}
 	}		
 	

@@ -24,7 +24,7 @@ public class WeightedEdgeDirectedGraphTest extends TestCase {
 		graph.insertVertex("C");	//pos 2
 		graph.insertVertex("D");	//pos 3
 		graph.insertVertex("E");	//pos 4
-		graph.insertVertex("F");	//pos 5 (este es un vértice aislado)
+		graph.insertVertex("F");	//pos 5 (este es un vÃ©rtice aislado)
 		
 		graph.insertWEdgeDG(0, 2, new Integer(1));
 		graph.insertWEdgeDG(0, 3, new Integer(1));		

@@ -15,7 +15,7 @@ import cu.edu.cujae.ceis.graph.vertex.WeightedVertex;
 
 /**
  * Pruebas de unidad para las funciones de los
- * grafos con vértices ponderados.
+ * grafos con vÃ©rtices ponderados.
  */
 public class WeightedVertexGraphTest extends TestCase {
 	
@@ -28,7 +28,7 @@ public class WeightedVertexGraphTest extends TestCase {
 		graph.insertWVertex("C", new Integer(1));	//pos 2
 		graph.insertWVertex("D", new Integer(1));	//pos 3
 		graph.insertWVertex("E", new Integer(1));	//pos 4
-		graph.insertWVertex("F", new Integer(1));	//pos 5 (este es un vértice aislado)
+		graph.insertWVertex("F", new Integer(1));	//pos 5 (este es un vÃ©rtice aislado)
 		
 		graph.insertEdgeNDG(0, 2);
 		graph.insertEdgeNDG(0, 3);		
@@ -54,7 +54,7 @@ public class WeightedVertexGraphTest extends TestCase {
 		}
 		
 		if(totalW != 7)
-			fail("Error con los vértices ponderados");
+			fail("Error con los vÃ©rtices ponderados");
 	}
 
 }

@@ -13,10 +13,10 @@ public class WeightedEdge extends Edge {
 	private Object weight;
 
 	/**
-	 * Inicia la instancia con el vértice 
+	 * Inicia la instancia con el vÃ©rtice 
 	 * asociado y el peso de la arista.
 	 * 
-	 * @param vertex vértice asociado.
+	 * @param vertex vÃ©rtice asociado.
 	 * @param weight peso de la arista.
 	 */
 	public WeightedEdge(Vertex vertex, Object weight) {

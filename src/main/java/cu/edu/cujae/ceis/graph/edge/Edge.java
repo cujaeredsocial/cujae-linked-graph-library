@@ -8,35 +8,35 @@ import cu.edu.cujae.ceis.graph.vertex.Vertex;
 public class Edge {
 	
 	/**
-	 * Vértice asociado a la arista.
+	 * VÃ©rtice asociado a la arista.
 	 */
 	protected Vertex vertex;
 
 	/**
-	 * Inicia la instancia con el vértice
+	 * Inicia la instancia con el vÃ©rtice
 	 * asociado a la arista.
 	 * 
-	 * @param vertex vértice.
+	 * @param vertex vÃ©rtice.
 	 */
 	public Edge(Vertex vertex) {
 		this.vertex = vertex;
 	}
 	
 	/**
-	 * Devuelve el vértice asociado
+	 * Devuelve el vÃ©rtice asociado
 	 * a esta arista.
 	 * 
-	 * @return vértice.
+	 * @return vÃ©rtice.
 	 */
 	public Vertex getVertex() {
 		return vertex;
 	}
 	
 	/**
-	 * Indica el vértice asociado
+	 * Indica el vÃ©rtice asociado
 	 * con esta arista.
 	 * 
-	 * @param vertex vértice.
+	 * @param vertex vÃ©rtice.
 	 */
 	public void setVertex(Vertex vertex) {
 		this.vertex = vertex;

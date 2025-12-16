@@ -28,7 +28,7 @@ public class CommonGraphTest extends TestCase {
 		graph.insertVertex("C");	//pos 2
 		graph.insertVertex("D");	//pos 3
 		graph.insertVertex("E");	//pos 4
-		graph.insertVertex("F");	//pos 5 (este ser· un vÈrtice aislado)
+		graph.insertVertex("F");	//pos 5 (este ser√° un v√©rtice aislado)
 
 		graph.insertEdgeDG(0, 2);
 		graph.insertEdgeDG(0, 3);		
@@ -46,12 +46,12 @@ public class CommonGraphTest extends TestCase {
 	@Test
 	public void testIsEmpty() {
 		if(graph.isEmpty())
-			fail("El grafo no debe estar vacÌo");	
+			fail("El grafo no debe estar vac√≠o");	
 
 		graph.getVerticesList().clear();
 
 		if(!graph.isEmpty())
-			fail("El grafo debe estar vacÌo");
+			fail("El grafo debe estar vac√≠o");
 	}	
 
 	@Test
@@ -61,7 +61,7 @@ public class CommonGraphTest extends TestCase {
 		/*
 		 * Vamos a improvisarnos una clase que nos sirva como 
 		 * vector bidimensional para asociar dos posiciones de
-		 * vÈrtices adyacentes.
+		 * v√©rtices adyacentes.
 		 */
 		class Adjacents {
 			private int tail;
@@ -86,7 +86,7 @@ public class CommonGraphTest extends TestCase {
 		adjs.add(new Adjacents(3, 2));
 		adjs.add(new Adjacents(4, 0));
 
-		//ahora algunos de los que se espera que no sean adyacentes, hay m·s.
+		//ahora algunos de los que se espera que no sean adyacentes, hay m√°s.
 		ArrayList<Adjacents> notAdjs = new ArrayList<Adjacents>();
 		notAdjs.add(new Adjacents(5, 0));
 		notAdjs.add(new Adjacents(5, 1));
@@ -103,7 +103,7 @@ public class CommonGraphTest extends TestCase {
 			head = adjs.get(i).getHead();
 
 			if(!graph.areAdjacents(tail, head)) {
-				fail(String.format("Los vÈrtices %1$d y %2$d son adyacentes y no se detectaron como tal.", tail, head));
+				fail(String.format("Los v√©rtices %1$d y %2$d son adyacentes y no se detectaron como tal.", tail, head));
 			}
 		}
 
@@ -112,7 +112,7 @@ public class CommonGraphTest extends TestCase {
 			head = notAdjs.get(i).getHead();
 
 			if(graph.areAdjacents(tail, head)) {
-				fail(String.format("Los vÈrtices %1$d y %2$d no son adyacentes y se detectaron como tal.", tail, head));
+				fail(String.format("Los v√©rtices %1$d y %2$d no son adyacentes y se detectaron como tal.", tail, head));
 			}
 		}
 	}	
@@ -123,7 +123,7 @@ public class CommonGraphTest extends TestCase {
 		boolean success = graph.insertVertex("G");
 
 		if(!success || graph.getVerticesList().size() != size+1) 
-			fail("Error insertando vÈrtice.");
+			fail("Error insertando v√©rtice.");
 	}
 
 	@Test
@@ -212,11 +212,11 @@ public class CommonGraphTest extends TestCase {
 
 			for(int i=0; i<size; i++) {
 				if(!vertsNames.contains(expectedsVertsNames.get(i))) {
-					fail("Se esperaba que el vÈrtice " + expectedsVertsNames.get(i) + " se obtuviera como adyacente.");		
+					fail("Se esperaba que el v√©rtice " + expectedsVertsNames.get(i) + " se obtuviera como adyacente.");		
 				}
 			}
 		} else
-			fail("No se obtuvo la cantidad de vÈrtices adyacentes esperados.");	
+			fail("No se obtuvo la cantidad de v√©rtices adyacentes esperados.");	
 	}	
 	
 	@Test
@@ -225,8 +225,8 @@ public class CommonGraphTest extends TestCase {
 		Vertex v = graph.deleteVertex(3);
 		
 		/*
-		 * Verificamos que no se quedÛ en la lista de adyacentes
-		 * de otro vÈrtice.
+		 * Verificamos que no se qued√≥ en la lista de adyacentes
+		 * de otro v√©rtice.
 		 */
 		boolean adj = false;
 		Iterator<Vertex> iter = graph.getVerticesList().iterator();
@@ -236,14 +236,14 @@ public class CommonGraphTest extends TestCase {
 		}
 		
 		if(v == null || graph.getVerticesList().size() != size-1 || adj) 
-			fail("Error eliminando vÈrtice.");
+			fail("Error eliminando v√©rtice.");
 	}
 	
 	@Test
 	public void testDeleteVertexCascade() {
 		/*
-		 * Eliminando el vÈrtice A se debe eliminar en cascada B, C, D y E,
-		 * quedando solamente el vÈrtice aislado F.
+		 * Eliminando el v√©rtice A se debe eliminar en cascada B, C, D y E,
+		 * quedando solamente el v√©rtice aislado F.
 		 */
 		LinkedList<Vertex> deleted = graph.deleteVertexCascade(0);
 		ArrayList<String> deletedVertsNames   = new ArrayList<String>();
@@ -266,12 +266,12 @@ public class CommonGraphTest extends TestCase {
 			
 			for(int i=0; i<size; i++) {
 				if(!deletedVertsNames.contains(expectedsVertsNames.get(i))) {
-					fail("Se esperaba que se eliminara en cascada el vÈrtice " + expectedsVertsNames.get(i) + ".");		
+					fail("Se esperaba que se eliminara en cascada el v√©rtice " + expectedsVertsNames.get(i) + ".");		
 				}
 			}
 		}
 		
 		if(graph.getVerticesList().size() > 1)
-			fail("No se eliminaron realmente los vÈrtices en cascada");
+			fail("No se eliminaron realmente los v√©rtices en cascada");
 	}
 }
