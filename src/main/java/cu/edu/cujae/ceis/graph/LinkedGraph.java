@@ -15,7 +15,7 @@ import cu.edu.cujae.ceis.graph.vertex.Vertex;
 import cu.edu.cujae.ceis.graph.vertex.WeightedVertex;
 
 /**
- * <h1>Grafo enlazado</h1> 
+ * Grafo enlazado 
  */
 public class LinkedGraph extends Graph implements ILinkedDirectedGraph, ILinkedNotDirectedGraph,
 							ILinkedWeightedEdgeDirectedGraph, ILinkedWeightedEdgeNotDirectedGraph,
@@ -437,7 +437,7 @@ public class LinkedGraph extends Graph implements ILinkedDirectedGraph, ILinkedN
 	/**
 	 * <p>Elimina los vértices que no se encuentren asociados
 	 * en un grafo dirigido.</p>
-	 * <bold>Nota:</bold> Un vértice con un lazo a si mismo no
+	 * <strong>Nota:</strong> Un vértice con un lazo a si mismo no
 	 * se considera desconectado.
 	 * @return lista de vértices eliminados.
 	 */
@@ -547,7 +547,7 @@ public class LinkedGraph extends Graph implements ILinkedDirectedGraph, ILinkedN
 	/**
 	 * <p>Elimina los vértices que no se encuentren asociados
 	 * en un grafo no dirigido.</p>
-	 * <bold>Nota:</bold> Un vértice con un lazo a si mismo no
+	 * <strong>Nota:</strong> Un vértice con un lazo a si mismo no
 	 * se considera desconectado.
 	 * @return lista de vértices eliminados.
 	 */

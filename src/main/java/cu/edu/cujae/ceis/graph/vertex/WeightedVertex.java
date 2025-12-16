@@ -1,7 +1,7 @@
 package cu.edu.cujae.ceis.graph.vertex;
 
 /**
- * <h1>Vértice con peso</h1>
+ * Vértice con peso
  */
 public class WeightedVertex extends Vertex {
 	

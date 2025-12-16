@@ -3,7 +3,7 @@ package cu.edu.cujae.ceis.graph.edge;
 import cu.edu.cujae.ceis.graph.vertex.Vertex;
 
 /**
- *  <h1>Arista con peso</h1>
+ *  Arista con peso
  */
 public class WeightedEdge extends Edge {
 	

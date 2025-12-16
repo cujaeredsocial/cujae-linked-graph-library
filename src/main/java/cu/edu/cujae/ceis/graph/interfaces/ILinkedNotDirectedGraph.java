@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import cu.edu.cujae.ceis.graph.vertex.Vertex;
 
 /**
- * <h1>Interface para grafos no dirigidos</h1>
+ * Interface para grafos no dirigidos
  */
 public interface ILinkedNotDirectedGraph {
 	

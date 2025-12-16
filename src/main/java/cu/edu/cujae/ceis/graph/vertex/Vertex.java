@@ -7,7 +7,7 @@ import cu.edu.cujae.ceis.graph.edge.Edge;
 
 
 /**
- * <h1>Vértice elemental</h1>
+ * Vértice elemental
  */
 public class Vertex {
 	

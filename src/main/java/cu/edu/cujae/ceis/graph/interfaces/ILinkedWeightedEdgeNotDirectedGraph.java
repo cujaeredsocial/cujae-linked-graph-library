@@ -1,7 +1,7 @@
 package cu.edu.cujae.ceis.graph.interfaces;
 
 /**
- * <h1>Interface para grafos no dirigidos con aristas ponderadas</h1>
+ * Interface para grafos no dirigidos con aristas ponderadas
  */
 public interface ILinkedWeightedEdgeNotDirectedGraph extends
 		ILinkedNotDirectedGraph {

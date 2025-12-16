@@ -3,7 +3,7 @@ package cu.edu.cujae.ceis.graph.edge;
 import cu.edu.cujae.ceis.graph.vertex.Vertex;
 
 /**
- * <h1>Arista elemental</h1>
+ * Arista elemental
  */
 public class Edge {
 	
